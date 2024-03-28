@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import App from "../components/App.svelte";
+---
+
+<Layout title="Chat con PDF">
+  <div class="relative h-full w-full bg-slate-950">
+    <div
+      class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)]
+		bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+    >
+    </div>
+  </div>
+  <main class="grid place-content-center min-h-screen w-screen">
+    <h1 class="text-6xl opacity-70 font-bold etxt-center pb-10">
+      Chatea con tu PDF
+    </h1>
+    <section class="conatainer w-[10000px] max-w-xl h-64">
+      <App client:idle />
+    </section>
+    <slot />
+  </main>
+</Layout>
+
+<style>
+  html {
+    font: semibold, sans-serif;
+    /* color-scheme: light dark;  */
+  }
+</style>

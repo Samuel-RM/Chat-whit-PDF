@@ -2,7 +2,8 @@
 
 # Chat whit your PDF
 
-<div>
+</div>
+
 This is a simple App to talk to your pdf using IA
 
 # Acerca del proyecto

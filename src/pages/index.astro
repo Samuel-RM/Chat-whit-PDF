@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import App from "../components/App.svelte";
+import About from "../components/About.astro";
 ---
 
 <Layout title="Chat con PDF">
@@ -17,14 +18,15 @@ import App from "../components/App.svelte";
     </h1>
     <section class="conatainer w-[10000px] max-w-xl h-64">
       <App client:idle />
+      <About />
+      <slot />
     </section>
-    <slot />
   </main>
-</Layout>
 
-<style>
-  html {
-    font: semibold, sans-serif;
-    /* color-scheme: light dark;  */
-  }
-</style>
+  <style>
+    html {
+      font: semibold, sans-serif;
+      /* color-scheme: light dark;  */
+    }
+  </style>
+</Layout>
